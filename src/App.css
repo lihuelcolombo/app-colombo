@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* ItemListContainer Cards */
+.main-pic {
+  width: 77%;
+}
+
+/* ItemDetails  */
+.item-detail{
+  margin: 30px;
+  padding: 30px;
+}
+
+.item-detail figure {
+  width: 80%;
+}
+

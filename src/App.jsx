@@ -1,15 +1,17 @@
 
-import './App.css';
+
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
+import AppRouter from './routes/AppRouter';
+import './App.css';
 
 
 
 function App() {
   return (
-    <div>
-      <NavBar/>      
-      <ItemListContainer/>       
+    <div>      
+      {/* <ItemListContainer/> */}
+      <AppRouter/>       
     </div>
   );
 }
