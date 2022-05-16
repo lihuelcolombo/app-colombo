@@ -8,10 +8,10 @@ import NotFound404 from '../pages/NotFound404'
 const AppRouter = () => {
   return (
     <BrowserRouter>
-      <NavBar/>      
+      <NavBar/>
       <Routes>
         <Route path="/" element={<ItemListContainer/>}/>
-        <Route path="/category:id" element={<ItemListContainer/>}/>
+        <Route path="/category/:id" element={<ItemListContainer/>}/>
         <Route path="/item/:id" element={<ItemDetailContainer/>}/>
         <Route path="*" element={<NotFound404/>}/>
       </Routes>

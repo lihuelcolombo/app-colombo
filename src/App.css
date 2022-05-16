@@ -53,3 +53,10 @@
   width: 80%;
 }
 
+.model-title {
+  min-height: 80px;
+}
+
+.navbar {
+  z-index: 99;
+}

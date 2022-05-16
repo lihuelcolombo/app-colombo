@@ -1,56 +1,92 @@
 export const itemList = [
 
   { id: 1, 
-    cat: 'Zapatillas',
+    category: 'Calzado',
     brand: 'Adidas', 
-    model: 'Stabil X',    
+    model: 'Zapatillas Stabil X',    
+    gen: 'Unisex',    
     price: 15000,
     img: 'https://www.tradeinn.com/f/13721/137210592/adidas-stabil-x.jpg',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum odio neque, volutpat nec suscipit non, elementum a ligula. Nulla posuere, felis vitae iaculis tincidunt, quam est cursus ex, ut iaculis augue risus non elit. Phasellus eu augue risus. Fusce non urna dignissim, dapibus ipsum sed, sollicitudin justo. Donec vel venenatis.'
   },
 
   { id: 2, 
-    cat: 'Zapatillas',
+    category: 'Calzado',
     brand: 'Hummel', 
-    model: 'Root Elite',    
+    model: 'Zapatillas Root Elite', 
+    gen: 'Mujer',       
     price: 18600,
     img: 'https://www.tradeinn.com/f/13872/138729074/hummel-zapatillas-balonmano-root-elite.jpg',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum odio neque, volutpat nec suscipit non, elementum a ligula. Nulla posuere, felis vitae iaculis tincidunt, quam est cursus ex, ut iaculis augue risus non elit. Phasellus eu augue risus. Fusce non urna dignissim, dapibus ipsum sed, sollicitudin justo. Donec vel venenatis.'
   },
 
   { id: 3, 
-    cat: 'Zapatillas',
+    category: 'Calzado',
     brand: 'Asics', 
-    model: 'Sky Elite FF Tokyo',    
+    model: 'Zapatillas Sky Elite FF Tokyo',    
+    gen: 'Hombre',    
     price: 17000,
     img: 'https://cdn.sportshop.com/catalog/product/580/580/a/s/asics-1051a055-701.jpg',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum odio neque, volutpat nec suscipit non, elementum a ligula. Nulla posuere, felis vitae iaculis tincidunt, quam est cursus ex, ut iaculis augue risus non elit. Phasellus eu augue risus. Fusce non urna dignissim, dapibus ipsum sed, sollicitudin justo. Donec vel venenatis.'
   },
 
   { id: 4, 
-    cat: 'Zapatillas',
+    category: 'Calzado',
     brand: 'Salming', 
-    model: 'Kobra Mid',    
+    model: 'Zapatillas Kobra Mid',
+    gen: 'Hombre',        
     price: 16500,
     img: 'https://www.zapatillasdeporte.net/wp-content/uploads/2020/10/137184925.jpg',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum odio neque, volutpat nec suscipit non, elementum a ligula. Nulla posuere, felis vitae iaculis tincidunt, quam est cursus ex, ut iaculis augue risus non elit. Phasellus eu augue risus. Fusce non urna dignissim, dapibus ipsum sed, sollicitudin justo. Donec vel venenatis.'
   },
 
   { id: 5, 
-    cat: 'Zapatillas',
+    category: 'Calzado',
     brand: 'Mizuno', 
-    model: 'Wave Luminous 2',    
+    model: 'Zapatillas Wave Luminous 2',  
+    gen: 'Mujer',     
     price: 14500,
     img: 'https://media.handball-store.es/catalog/product/cache/small_image/318x/9df78eab33525d08d6e5fb8d27136e95/v/1/v1ga212024_0.jpg',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum odio neque, volutpat nec suscipit non, elementum a ligula. Nulla posuere, felis vitae iaculis tincidunt, quam est cursus ex, ut iaculis augue risus non elit. Phasellus eu augue risus. Fusce non urna dignissim, dapibus ipsum sed, sollicitudin justo. Donec vel venenatis.'
   },
 
   { id: 6, 
-    cat: 'Zapatillas',
+    category: 'Calzado',
     brand: 'Kempa', 
-    model: 'Wing 2.0',    
+    model: 'Zapatillas Wing 2.0',   
+    gen: 'Unisex',    
     price: 14900,
     img: 'https://cdn.sportshop.com/catalog/product/580/580/k/e/kempa-2008540-05.jpg',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum odio neque, volutpat nec suscipit non, elementum a ligula. Nulla posuere, felis vitae iaculis tincidunt, quam est cursus ex, ut iaculis augue risus non elit. Phasellus eu augue risus. Fusce non urna dignissim, dapibus ipsum sed, sollicitudin justo. Donec vel venenatis.'
+  },
+
+  { id: 7, 
+    category: 'Indumentaria',
+    brand: 'Hummel', 
+    model: 'Short Hmlcore XK',   
+    gen: 'Hombre',    
+    price: 8000,
+    img: 'https://www.tradeinn.com/f/13870/138701574_2/hummel-pantalones-cortos-hmlcore-xk.jpg',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum odio neque, volutpat nec suscipit non, elementum a ligula. Nulla posuere, felis vitae iaculis tincidunt, quam est cursus ex, ut iaculis augue risus non elit. Phasellus eu augue risus. Fusce non urna dignissim, dapibus ipsum sed, sollicitudin justo. Donec vel venenatis.'
+  },
+
+  { id: 8, 
+    category: 'Indumentaria',
+    brand: 'Hummel', 
+    model: 'Camiseta Manga Corta Core Poly',   
+    gen: 'Hombre',    
+    price: 10000,
+    img: 'https://www.tradeinn.com/f/13780/137807545/hummel-camiseta-manga-corta-core-poly.jpg',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum odio neque, volutpat nec suscipit non, elementum a ligula. Nulla posuere, felis vitae iaculis tincidunt, quam est cursus ex, ut iaculis augue risus non elit. Phasellus eu augue risus. Fusce non urna dignissim, dapibus ipsum sed, sollicitudin justo. Donec vel venenatis.'
+  },
+
+  { id: 9, 
+    category: 'Accesorios',
+    brand: 'Hummel', 
+    model: 'Medias Elite Indoor High',   
+    gen: 'Unisex',    
+    price: 3000,
+    img: 'https://zapatillasindoor.com/11237-large_default/calcetines-largos-hummel-elite-indoor-sock-high-.jpg',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum odio neque, volutpat nec suscipit non, elementum a ligula. Nulla posuere, felis vitae iaculis tincidunt, quam est cursus ex, ut iaculis augue risus non elit. Phasellus eu augue risus. Fusce non urna dignissim, dapibus ipsum sed, sollicitudin justo. Donec vel venenatis.'
   }
 ]

@@ -10,21 +10,23 @@ const NavBar = () => {
           <a class="btn btn-ghost normal-case text-xl">Handball Gear</a>
         </Link>
       </div>
-      <div class="navbar-center hidden lg:flex">
-          
-      </div>
       <div class="flex-none">
+        <ul class="menu menu-horizontal p-0">
+            <Link to={`/category/hombre`}><li><a>Hombre</a></li></Link>        
+            <Link to={`/category/mujer`}><li><a>Mujer</a></li></Link>
+            <Link to={`/category/calzado`}><li><a>Calzado</a></li></Link>
+            <Link to={`/category/indumentaria`}><li><a>Indumentaria</a></li></Link>
+            <Link to={`/category/accesorios`}><li><a>Accesorios</a></li></Link>          
+        </ul>
+      </div>
+    <div class="flex-none">
         <div>
             <CartWidget></CartWidget>
         </div>
       </div>
-    </div>
-      
+  </div>
   )
 }
 
 export default NavBar
-
-
-
 

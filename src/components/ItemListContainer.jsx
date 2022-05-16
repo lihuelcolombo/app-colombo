@@ -1,9 +1,10 @@
 import { list } from 'postcss';
 import React, { useEffect, useState } from 'react'
 import { itemList } from '../data/ItemList';
-import Item from './Item'
+import ItemList from './ItemList';
 
 const ItemListContainer = () => {
+  
   
   const [items, setItems] = useState([])
 
@@ -23,10 +24,11 @@ const ItemListContainer = () => {
     })
   }
 
+
   return (
-    <div className='grid grid-cols-3 content-evenly'>
-        {items.map( i => <Item key={i.id} data={i}/>)}
-    </div>
+  <div>
+      <ItemList items={items}/>
+  </div>
   )
 }
 
