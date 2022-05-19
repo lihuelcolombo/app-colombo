@@ -1,11 +1,13 @@
 import { list } from 'postcss';
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
+import CartContextProvider from '../context/cartContext';
 import { itemList } from '../data/ItemList';
 import ItemList from './ItemList';
 
 const ItemListContainer = () => {
   
-  
+  const { categoryid } = useParams ()
   const [items, setItems] = useState([])
 
   useEffect(() => {
@@ -26,9 +28,11 @@ const ItemListContainer = () => {
 
 
   return (
-  <div>
-      <ItemList items={items}/>
-  </div>
+    <CartContextProvider>
+      <div>
+          <ItemList items={items}/>
+      </div>
+    </CartContextProvider>  
   )
 }
 
