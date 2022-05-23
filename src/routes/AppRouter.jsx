@@ -3,12 +3,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ItemDetailContainer from '../components/ItemDetailContainer'
 import ItemListContainer from '../components/ItemListContainer'
 import NavBar from '../components/NavBar'
-import AppContextProvider from '../context/AppContext'
+
 import NotFound404 from '../pages/NotFound404'
 
 const AppRouter = () => {
   return (
-    <AppContextProvider>
+    
 
         <BrowserRouter>
           <NavBar/>
@@ -19,7 +19,7 @@ const AppRouter = () => {
             <Route path="*" element={<NotFound404/>}/>
           </Routes>
         </BrowserRouter>          
-    </AppContextProvider>          
+
   )
 }
 
