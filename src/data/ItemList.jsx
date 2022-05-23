@@ -90,3 +90,11 @@ export const itemList = [
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum odio neque, volutpat nec suscipit non, elementum a ligula. Nulla posuere, felis vitae iaculis tincidunt, quam est cursus ex, ut iaculis augue risus non elit. Phasellus eu augue risus. Fusce non urna dignissim, dapibus ipsum sed, sollicitudin justo. Donec vel venenatis.'
   }
 ]
+
+const task = new Promise ((resp) => {
+  resp (itemList)
+}, 2000)
+
+export const getItems = () => {
+  return task
+}
