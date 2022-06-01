@@ -5,15 +5,15 @@ import ItemList from './ItemList';
 
 const ItemListContainer = () => {
     
-  const [items, setItems] = useState([])
+  const [category, setCategory] = useState([])
   const { categoryId } = useParams()
 
   useEffect(() => {
     if (categoryId === undefined){
-      getItems().then((resp) => setItems (resp))
+      getItems().then((resp) => setCategory (resp))
     } else {
       getItems().then((resp) => 
-        setItems(resp.filter((product) => product.category === categoryId ))
+        setCategory(resp.filter((product) => product.category === categoryId ))
       )
     }
   }, [categoryId])
@@ -41,7 +41,7 @@ const ItemListContainer = () => {
   return (
     
       <div>
-          <ItemList items={items}/>
+          <ItemList category={category}/>
       </div>    
     
   )

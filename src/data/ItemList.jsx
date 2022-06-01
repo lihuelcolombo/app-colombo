@@ -1,7 +1,7 @@
 export const itemList = [
 
   { id: 1, 
-    category: 'Calzado',
+    category: 'calzado',
     brand: 'Adidas', 
     model: 'Zapatillas Stabil X',    
     gen: 'Unisex',    
@@ -11,7 +11,7 @@ export const itemList = [
   },
 
   { id: 2, 
-    category: 'Calzado',
+    category: 'calzado',
     brand: 'Hummel', 
     model: 'Zapatillas Root Elite', 
     gen: 'Mujer',       
@@ -21,7 +21,7 @@ export const itemList = [
   },
 
   { id: 3, 
-    category: 'Calzado',
+    category: 'calzado',
     brand: 'Asics', 
     model: 'Zapatillas Sky Elite FF Tokyo',    
     gen: 'Hombre',    
@@ -31,7 +31,7 @@ export const itemList = [
   },
 
   { id: 4, 
-    category: 'Calzado',
+    category: 'calzado',
     brand: 'Salming', 
     model: 'Zapatillas Kobra Mid',
     gen: 'Hombre',        
@@ -41,7 +41,7 @@ export const itemList = [
   },
 
   { id: 5, 
-    category: 'Calzado',
+    category: 'calzado',
     brand: 'Mizuno', 
     model: 'Zapatillas Wave Luminous 2',  
     gen: 'Mujer',     
@@ -51,7 +51,7 @@ export const itemList = [
   },
 
   { id: 6, 
-    category: 'Calzado',
+    category: 'calzado',
     brand: 'Kempa', 
     model: 'Zapatillas Wing 2.0',   
     gen: 'Unisex',    
@@ -61,7 +61,7 @@ export const itemList = [
   },
 
   { id: 7, 
-    category: 'Indumentaria',
+    category: 'indumentaria',
     brand: 'Hummel', 
     model: 'Short Hmlcore XK',   
     gen: 'Hombre',    
@@ -71,7 +71,7 @@ export const itemList = [
   },
 
   { id: 8, 
-    category: 'Indumentaria',
+    category: 'indumentaria',
     brand: 'Hummel', 
     model: 'Camiseta Manga Corta Core Poly',   
     gen: 'Hombre',    
@@ -81,7 +81,7 @@ export const itemList = [
   },
 
   { id: 9, 
-    category: 'Accesorios',
+    category: 'accesorios',
     brand: 'Hummel', 
     model: 'Medias Elite Indoor High',   
     gen: 'Unisex',    
