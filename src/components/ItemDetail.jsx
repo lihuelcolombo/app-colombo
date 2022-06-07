@@ -1,10 +1,15 @@
-import React from 'react'
-
-
-
+import React, { useState } from 'react'
+import ItemCount from './ItemCount'
 
 const ItemDetail = ( {item} ) => {
   
+  const [terminar, setTerminar] = useState(false)
+
+  const onAdd = (count) => {
+    setTerminar(true)
+    console.log(count);
+  }
+
   return (
     <div className="item-detail card lg:card-side bg-base-100 shadow-xl">
       <figure><img src={item.img} alt="img"></img></figure>
@@ -14,7 +19,7 @@ const ItemDetail = ( {item} ) => {
         <h2 class="py-5 text-5xl card-title">${item.price}</h2>                
         <p class="py-5 text-2xl">{item.desc}</p>
         <div class="card-actions justify-end">
-          <button class="btn btn-primary">Comprar</button>          
+          <ItemCount stock={item.stock} onAdd={onAdd}/>          
         </div>
       </div>
     </div>

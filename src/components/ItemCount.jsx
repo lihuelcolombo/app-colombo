@@ -1,19 +1,43 @@
-// import React, { useState } from 'react'
-// import { useAppContext } from '../context/AppContext'
-// import { useCartContext } from '../context/cartContext'
+import React, { useState } from "react"
 
 
-// const ItemCount = (stock, onAdd, id) => {
+const ItemCount = ({ stock, onAdd, id }) => {
+	const [count, setCount] = useState(0)
 
-//   const [count, setCount] = useState(0)
+	const handleAdd = () => {
+		if (count < stock) {
+			setCount(count + 1)
+		}
+	}
+	const handleRemove = () => {
+		if (count > 0) {
+			setCount(count - 1)
+		}
+	}
 
-//   const { addToCart } =  useCartContext()
-//   const { items } = useAppContext ()
+	return (
+		<>
+			<div className="flex gap-4 mt-4">
+				<div className="flex flex-row">
+					<button className="btn " onClick={handleRemove}>-
+						
+					</button>
+					<label className="alert alert-white">{count}</label>
+					<button className="btn " onClick={handleAdd}>+
+						
+					</button>
+				</div>
+				<div>
+					<button
+						className="btn bg-primary text-white btn-block "
+						onClick={() => onAdd(id, count)}
+					>
+						Agregar al Carrito
+					</button>
+				</div>
+			</div>
+		</>
+	)
+}
 
-
-//   return (
-//     <div>ItemCount</div>
-//   )
-// }
-
-// export default ItemCount
+export default ItemCount

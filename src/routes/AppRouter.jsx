@@ -4,11 +4,14 @@ import ItemDetailContainer from '../components/ItemDetailContainer'
 import ItemListContainer from '../components/ItemListContainer'
 import NavBar from '../components/NavBar'
 
+
 import NotFound404 from '../pages/NotFound404'
 
 const AppRouter = () => {
   return (
     
+      
+
 
         <BrowserRouter>
           <NavBar/>
@@ -20,6 +23,8 @@ const AppRouter = () => {
           </Routes>
         </BrowserRouter>          
 
+
+      
   )
 }
 
