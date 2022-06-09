@@ -15,7 +15,7 @@ const AppContextProvider = ({ children }) => {
     getItems().then((resp) => setItems(resp))
   })
   return (
-    <AppContextProvider value={{ items }}>{children}</AppContextProvider>
+    <AppContext.Provider value={{ items }}>{children}</AppContext.Provider>
   )
 }
 

@@ -1,8 +1,14 @@
 import React, { useState } from "react"
+import { useAppContext } from "../context/AppContext"
+import { useCartContext } from "../context/CartContext"
+
 
 
 const ItemCount = ({ stock, onAdd, id }) => {
 	const [count, setCount] = useState(0)
+
+	const { addToCart } = useCartContext()
+	const { items } = useAppContext()
 
 	const handleAdd = () => {
 		if (count < stock) {
@@ -13,6 +19,18 @@ const ItemCount = ({ stock, onAdd, id }) => {
 		if (count > 0) {
 			setCount(count - 1)
 		}
+	}
+
+	const handleClick = (id, cantidad) => {
+		const findProduct = items.find((items) => items.id === id)
+
+		if (!findProduct) {
+			alert("Error en la base de datos")
+			return
+		}
+
+		addToCart(findProduct, cantidad)
+		onAdd(count)
 	}
 
 	return (
@@ -30,7 +48,7 @@ const ItemCount = ({ stock, onAdd, id }) => {
 				<div>
 					<button
 						className="btn bg-primary text-white btn-block "
-						onClick={() => onAdd(id, count)}
+						onClick={() => handleClick(id, count)}
 					>
 						Agregar al Carrito
 					</button>
