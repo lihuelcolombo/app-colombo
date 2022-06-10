@@ -32,39 +32,3 @@ const CartView = () => {
 
 export default CartView
 
-
-
-// import React from 'react';
-// import useCartContext from '../context/CartContext';
-
-// function CartView() {
-//   const { cart } = useCartContext();
-
-//   return (
-//     <div>
-//       <h1>Carrito de compras</h1>
-//       {cart.map (item => (
-//         <div key={item.id}>
-//           <h2>{item.title}</h2>
-//           <h3>{item.cantidad}</h3>
-//           <h3>{item.precio}</h3>
-//         </div>
-      
-
-//       ))}
-
-//     </div>
-    
-    
-//     // <div className=" card lg:card-side bg-base-100 shadow-xl">      
-//     //   <div className="card-body">
-//     //     <h1 className="justify-center py-5 text-3xl card-title">Carrito de compras</h1>
-//     //     <h2 className="py-5 text-5xl card-title"></h2>                
-//     //     <p className="py-5 text-2xl"></p>
-      
-//     //   </div>
-//     // </div>
-//   )
-// }
-
-// export default CartView

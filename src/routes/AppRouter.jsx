@@ -8,6 +8,7 @@ import ItemListContainer from '../components/ItemListContainer'
 import NavBar from '../components/NavBar'
 import NotFound404 from '../pages/NotFound404'
 import CartView from '../components/CartView'
+import Firestore from '../components/Firestore'
 
 
 
@@ -24,6 +25,7 @@ const AppRouter = () => {
             <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
             <Route path="/item/:id" element={<ItemDetailContainer/>}/>
             <Route path="/cart" element={<CartView/>}/>
+            <Route path="/firestore" element={<Firestore/>}/>
             <Route path="*" element={<NotFound404/>}/>
           </Routes>
         </BrowserRouter>          
