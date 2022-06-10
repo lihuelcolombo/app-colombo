@@ -18,24 +18,7 @@ const ItemListContainer = () => {
     }
   }, [categoryId])
 
-  //este useEffect funciona sin categorias
-  // useEffect(() => {
-  //   getItems().then( data => {
-  //     setItems ( data )
-  //     console.log(data);
-  //   })
-    
-  // }, [])
 
-  
-  // esta promise fue movida hacia el ItemList.jsx
-  // const getItems = () => { 
-  //   return new Promise ( (resolve, reject) => {
-  //     setTimeout(() => {
-  //       resolve(itemList)        
-  //     }, 2000);
-  //   })
-  // }
 
 
   return (
