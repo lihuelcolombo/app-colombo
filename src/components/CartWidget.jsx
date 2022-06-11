@@ -5,8 +5,8 @@ import { useCartContext } from '../context/CartContext'
 
 const CartWidget = () => {
 
-	const { quantityInCart, totalCart } = useCartContext()
-  return (
+    const { quantityInCart, totalCart } = useCartContext()
+  	return (
       <div className="dropdown dropdown-end">
           <label tabIndex="0" className="btn btn-ghost btn-circle">
               <div className="indicator">

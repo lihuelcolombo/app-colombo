@@ -35,7 +35,7 @@ const ItemDetailContainer = () => {
           height="400"
           width="400"
           color='grey'
-          ariaLabel='loading'          
+          ariaLabel='loading'                    
         />
       :
       <ItemDetail item={item}/>

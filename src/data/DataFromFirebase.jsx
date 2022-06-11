@@ -3,6 +3,8 @@ import { collection } from 'firebase/firestore/lite'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 
+
+
 const Products = () => {
 
 
@@ -18,10 +20,7 @@ const Products = () => {
     const productsCollecion = collection(db, 'items')
     getDocs( productsCollecion ).then(snapshot => {
       if (snapshot.size > 0) {
-        const ids = snapshot.docs.map( d => d.id ).join(',')
-        console.log('IDs: ', ids);
-
-        const productsData = snapshot.docs.map( d => ({'id': d.id, ... d.data()}) )
+      const productsData = snapshot.docs.map( d => ({'id': d.id, ... d.data()}) )
         console.log(productsData);
         setProducts(productsData)
       }
@@ -35,14 +34,19 @@ const Products = () => {
       <h1>Data From Firebase</h1>
       <h2>Products</h2>
       {products.map( p => 
-        <>
-        <div>{p.id}</div>
-        <div>{p.brand}</div>
-        <div>{p.model}</div>        
-        </>
+        <div key={p.id}>
+          <div>{p.id}</div>
+          <div>{p.brand}</div>
+          <div>{p.model}</div>        
+        </div>
+        
         )}
     </div>
   )
 }
 
+
 export default Products
+
+
+

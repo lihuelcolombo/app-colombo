@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from './ItemCount'
 
+
 const ItemDetail = ( {item} ) => {
   
   const [terminar, setTerminar] = useState(false)
@@ -12,7 +13,7 @@ const ItemDetail = ( {item} ) => {
   }
 
   return (
-    <div className="item-detail card lg:card-side bg-base-100 shadow-xl">
+    <div className="card-spacing card lg:card-side bg-base-100 shadow-xl">
       <figure><img src={item.img} alt="img"></img></figure>
       <div className="card-body">
       <h2 className="py-5 text-5xl card-title">{item.brand}</h2>        

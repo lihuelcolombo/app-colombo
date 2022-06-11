@@ -100,8 +100,10 @@ export const itemList = [
   }
 ]
 
+
+
 const task = new Promise ((resp) => {
-  resp (itemList)
+  resp (itemList)  
 }, 2000)
 
 export const getItems = () => {

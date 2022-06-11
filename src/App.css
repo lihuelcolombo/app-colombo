@@ -43,13 +43,13 @@
   width: 77%;
 }
 
-/* ItemDetails  */
-.item-detail{
+/* card-spacing  */
+.card-spacing{
   margin: 30px;
   padding: 30px;
 }
 
-.item-detail figure {
+.card-spacing figure {
   width: 80%;
 }
 

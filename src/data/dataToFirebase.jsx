@@ -14,7 +14,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-//PRODUCTS contiene todos nuestros items a publicar en nuestra colección de Firestore
+
 const PRODUCTS = [
   { 'id': 1, 
   'category': 'calzado',
