@@ -28,14 +28,14 @@ const CartView = () => {
         {cart.map (item => (
           <div className='grid grid-cols-2' key={item.id}>
             <div >
-            <img src={item.img} alt="img"></img>  
+            <img className='container' src={item.img} alt="img"></img>  
             </div>   
             <div>
             <h2 className='text-2xl'><strong>{item.brand}</strong> {item.model}</h2>
             <p className='text-xl'>Precio unitario: ${item.price}</p>
             <p className='text-xl'>Unidades: {item.quantity}</p>
             <p className='text-xl'>Subtotal: ${item.quantity * item.price}</p>
-            <button className='italic' onClick={() => deleteFromCart(item.id)}>Eliminar este producto</button>
+            <button className='italic' onClick={() => deleteFromCart(item.id)}>Quitar del carrito</button>
             <br />
             </div>         
           </div>
@@ -44,8 +44,8 @@ const CartView = () => {
         <div className='center' >
         <h2 className='text-2xl'>Productos agregados: {quantityInCart()}</h2>
         <h2 className='text-3xl'>Monto total: ${totalCart()}</h2>
-        <button onClick={()=>clearCart()} className="btn btn-secondary">Vaciar carrito</button>
-        <button className="btn btn-primary ml-2">Finalizar compra</button>
+        <button onClick={()=>clearCart()} className="btn btn-error">Vaciar carrito</button>
+        <button className="btn btn-success ml-2">Finalizar compra</button>
         </div>
       </div>
     </div>

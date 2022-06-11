@@ -13,7 +13,7 @@ const Item = ( {data} ) => {
           <h2 className="text-2xl card-title">${data.price}</h2>          
           <div className="card-actions justify-end">
             <Link to={`/item/${data.id}`}> 
-                <button className="btn btn-primary">DETALLES</button>
+                <button className="btn btn-info">DETALLES</button>
             </Link>
           </div>
         </div>

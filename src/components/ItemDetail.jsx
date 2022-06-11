@@ -22,11 +22,24 @@ const ItemDetail = ( {item} ) => {
         <p className="py-5 text-2xl">{item.desc}</p>
         <div className="card-actions justify-end">
           {terminar ? (
+              <>
+              <button>
+              <Link to="/"
+                className="btn bg-primary text-white btn-block"                
+              >
+                Ver más productos
+              </Link>
+              </button>
+
+              <button>
               <Link to="/cart"
                 className="btn bg-primary text-white btn-block"                
               >
                 Terminar Compra
               </Link>
+              </button>
+              </>
+              
             ) : ( 
               <ItemCount stock={item.stock} onAdd={onAdd} id={item.id}/>          
             )}

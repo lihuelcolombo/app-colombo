@@ -17,9 +17,9 @@ const CartWidget = () => {
           <div tabIndex="0" className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
               <div className="card-body">
                   <span className="font-bold text-lg">{quantityInCart()} Items</span>
-                  <span className="text-info">${totalCart()}</span>
+                  <span className="text-4xl text-info">${totalCart()}</span>
                   <div className="card-actions">
-                      <Link to={'/cart'}	className="btn btn-primary btn-block">Ir al carrito</Link>											
+                      <Link to={'/cart'}	className="btn btn-info btn-block">Ir al carrito</Link>											
 												
                   </div>
               </div>
