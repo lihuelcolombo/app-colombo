@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import {doc, getDoc, getFirestore} from "firebase/firestore"
 import dataToFirebase from '../data/dataToFirebase'
+import DataFromFirabase from '../data/DataFromFirabase'
+
 
 
 const Firestore = () => {
@@ -28,7 +30,7 @@ const getProductos = () => {
     <div>
       <h1>Firestore</h1>
       <button className='btn' onClick={dataToFirebase}>Data to Firebase</button>
-    
+      <DataFromFirabase/>
     </div>
   )
 }

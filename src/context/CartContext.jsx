@@ -11,7 +11,7 @@ const CartContextProvider = ( {children} ) => {
   
   //////////////////////////////////////////////////////////////////////////
   const addToCart = (producto, cantidad) => {
-    const newCart = [ ... cart]
+    const newCart = [ ...cart]
     const productIsInCart = isInCart(producto.id)
 
     if (productIsInCart) {
@@ -20,7 +20,7 @@ const CartContextProvider = ( {children} ) => {
       return
     }
     producto.quantity = cantidad
-    setCart([ ... newCart, producto])
+    setCart([ ...newCart, producto])
   }
   //////////////////////////////////////////////////////////////////////////
   const deleteFromCart = (id) => {
@@ -58,7 +58,6 @@ const CartContextProvider = ( {children} ) => {
     setCart,
     quantityInCart,
     totalCart
-
     }}
   >
     {children} </CartContext.Provider>
