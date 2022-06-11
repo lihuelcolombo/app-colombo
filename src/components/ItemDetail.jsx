@@ -2,14 +2,12 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from './ItemCount'
 
-
 const ItemDetail = ( {item} ) => {
   
   const [terminar, setTerminar] = useState(false)
 
   const onAdd = (count) => {
     setTerminar(true)
-    console.log(count);
   }
 
   return (

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { itemList } from '../data/ItemList'
 import ItemDetail from './ItemDetail'
 import { TailSpin } from  'react-loader-spinner'
+import { getItemByID } from '../firebase'
 
 
 const ItemDetailContainer = () => {
@@ -13,19 +13,13 @@ const ItemDetailContainer = () => {
 
   useEffect( () => {
     (async () => {
-      const itemData = await getItemDetail()
+      const itemData = await getItemByID(id)
+      console.log(itemData)
       setItem(itemData)
       setLoading ( false )
     })()
     }, [id])
   
-  const getItemDetail = () => {
-    return new Promise( (resolve) => {
-      setTimeout( () => {
-        resolve(itemList.find( i => i.id == id) )
-      }, 2000);
-    })
-  }
 
   return (
     
@@ -35,7 +29,7 @@ const ItemDetailContainer = () => {
           height="400"
           width="400"
           color='grey'
-          ariaLabel='loading'                    
+          ariaLabel='loading'          
         />
       :
       <ItemDetail item={item}/>

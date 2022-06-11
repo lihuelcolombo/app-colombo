@@ -1,11 +1,12 @@
 import React, { useState } from "react"
 import { useAppContext } from "../context/AppContext"
 import { useCartContext } from "../context/CartContext"
+import { getItemByID } from "../firebase"
 
 
 
 const ItemCount = ({ stock, onAdd, id }) => {
-	const [count, setCount] = useState(1)
+	const [count, setCount] = useState(0)
 
 	const { addToCart } = useCartContext()
 	const { items } = useAppContext()
@@ -21,15 +22,15 @@ const ItemCount = ({ stock, onAdd, id }) => {
 		}
 	}
 
-	const handleClick = (id, cantidad) => {
-		const findProduct = items.find((items) => items.id === id)
+	const handleClick = async (id, cantidad) => {
+		const findProduct = await getItemByID(id)
 
 		if (!findProduct) {
 			alert("Error en la base de datos")
 			return
 		}
 
-		addToCart(findProduct, cantidad)
+		addToCart(findProduct, cantidad);
 		onAdd(count)
 	}
 

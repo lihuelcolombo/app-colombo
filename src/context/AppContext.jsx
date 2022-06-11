@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { getItems } from '../data/ItemList'
 
 
 const AppContext = createContext()
@@ -10,12 +9,12 @@ const AppContextProvider = ({ children }) => {
   
   const [items, setItems] = useState ([])
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    getItems().then((resp) => setItems(resp))
-  })
+  //   getItems().then((resp) => setItems(resp))
+  // })
   return (
-    <AppContext.Provider value={{ items }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{  }}>{children}</AppContext.Provider>
   )
 }
 
