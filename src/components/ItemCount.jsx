@@ -6,7 +6,7 @@ import { getItemByID } from "../firebase"
 
 
 const ItemCount = ({ stock, onAdd, id }) => {
-	const [count, setCount] = useState(0)
+	const [count, setCount] = useState(1)
 
 	const { addToCart } = useCartContext()
 	const { items } = useAppContext()

@@ -5,7 +5,8 @@ import {
   query,
   where,
   getDoc,
-  doc
+  doc,
+  addDoc
 } from 'firebase/firestore';
 
 const getProducts = async () => {
@@ -48,10 +49,17 @@ const getProductsByCategory = async (category) => {
   return products;
 };
 
+const addOrder = async (order) => {
+  const db = getFirestore();
+  const docSnap = await addDoc(collection(db, "orders"), order)
+  return docSnap.id
+}
+
 
 export {
   getProducts,
   getItemByID,
   getProductsByCategory,
+  addOrder
 };
 

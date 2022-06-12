@@ -26,11 +26,11 @@ const CartView = () => {
         <h1 className='text-4xl'>Carrito de compras</h1>
         <hr />        
         {cart.map (item => (
-          <div className='grid grid-cols-2' key={item.id}>
-            <div >
-            <img className='container' src={item.img} alt="img"></img>  
+          <div className='grid grid-cols-12 m-5 gap-4' key={item.id}>
+            <div className='col-span-2'>
+            <img src={item.img} alt="img"></img> 
             </div>   
-            <div>
+            <div className='col-span-9'>
             <h2 className='text-2xl'><strong>{item.brand}</strong> {item.model}</h2>
             <p className='text-xl'>Precio unitario: ${item.price}</p>
             <p className='text-xl'>Unidades: {item.quantity}</p>
@@ -44,8 +44,8 @@ const CartView = () => {
         <div className='center' >
         <h2 className='text-2xl'>Productos agregados: {quantityInCart()}</h2>
         <h2 className='text-3xl'>Monto total: ${totalCart()}</h2>
-        <button onClick={()=>clearCart()} className="btn btn-error">Vaciar carrito</button>
-        <button className="btn btn-success ml-2">Finalizar compra</button>
+        <button onClick={()=>clearCart()} className="btn btn-error">Vaciar carrito</button>        
+        <button className="btn btn-success ml-2"><Link to={'/checkout'}>Ir al pago</Link></button>
         </div>
       </div>
     </div>
