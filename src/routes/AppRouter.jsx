@@ -24,6 +24,7 @@ const AppRouter = () => {
             <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
             <Route path="/item/:id" element={<ItemDetailContainer/>}/>
             <Route path="/cart" element={<CartView/>}/>            
+            <Route path="/checkout" element={<Checkout/>}/>            
             <Route path="*" element={<NotFound404/>}/>
           </Routes>
         </BrowserRouter>          

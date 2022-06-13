@@ -13,8 +13,7 @@ const ItemDetailContainer = () => {
 
   useEffect( () => {
     (async () => {
-      const itemData = await getItemByID(id)
-      console.log(itemData)
+      const itemData = await getItemByID(id)      
       setItem(itemData)
       setLoading ( false )
     })()

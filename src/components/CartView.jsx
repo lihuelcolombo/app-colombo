@@ -35,10 +35,9 @@ const CartView = () => {
             <p className='text-xl'>Precio unitario: ${item.price}</p>
             <p className='text-xl'>Unidades: {item.quantity}</p>
             <p className='text-xl'>Subtotal: ${item.quantity * item.price}</p>
-            <button className='italic' onClick={() => deleteFromCart(item.id)}>Quitar del carrito</button>
-            <br />
-            </div>         
-          </div>
+            <button className='italic' onClick={() => deleteFromCart(item.id)}>Quitar del carrito</button>            
+            </div>              
+          </div>          
         ))}
         <hr />
         <div className='center' >
