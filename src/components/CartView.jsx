@@ -28,23 +28,23 @@ const CartView = () => {
         {cart.map (item => (
           <div className='grid grid-cols-12 m-5 gap-4' key={item.id}>
             <div className='col-span-2'>
-            <img src={item.img} alt="img"></img> 
+              <img src={item.img} alt="img"></img> 
             </div>   
             <div className='col-span-9'>
-            <h2 className='text-2xl'><strong>{item.brand}</strong> {item.model}</h2>
-            <p className='text-xl'>Precio unitario: ${item.price}</p>
-            <p className='text-xl'>Unidades: {item.quantity}</p>
-            <p className='text-xl'>Subtotal: ${item.quantity * item.price}</p>
-            <button className='italic' onClick={() => deleteFromCart(item.id)}>Quitar del carrito</button>            
+              <h2 className='text-2xl'><strong>{item.brand}</strong> {item.model}</h2>
+              <p className='text-xl'>Precio unitario: ${item.price}</p>
+              <p className='text-xl'>Unidades: {item.quantity}</p>
+              <p className='text-xl'>Subtotal: ${item.quantity * item.price}</p>
+              <button className='italic' onClick={() => deleteFromCart(item.id)}>Quitar del carrito</button>            
             </div>              
           </div>          
         ))}
         <hr />
-        <div className='center' >
-        <h2 className='text-2xl'>Productos agregados: {quantityInCart()}</h2>
-        <h2 className='text-3xl'>Monto total: ${totalCart()}</h2>
-        <button onClick={()=>clearCart()} className="btn btn-error">Vaciar carrito</button>        
-        <button className="btn btn-success ml-2"><Link to={'/checkout'}>Ir al pago</Link></button>
+        <div>
+          <h2 className='text-2xl mb-2'>Productos agregados: {quantityInCart()}</h2>
+          <h2 className='text-3xl mb-2'>Monto total: ${totalCart()}</h2>
+          <button onClick={()=>clearCart()} className="btn btn-error mt-2">Vaciar carrito</button>        
+          <button className="btn btn-success ml-2"><Link to={'/checkout'}>Ir al pago</Link></button>
         </div>
       </div>
     </div>

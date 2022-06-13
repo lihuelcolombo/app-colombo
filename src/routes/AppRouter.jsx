@@ -8,6 +8,8 @@ import NavBar from '../components/NavBar'
 import NotFound404 from '../pages/NotFound404'
 import CartView from '../components/CartView'
 import Checkout from '../components/Checkout'
+import Footer from '../components/Footer'
+
 
 
 
@@ -27,6 +29,7 @@ const AppRouter = () => {
             <Route path="/checkout" element={<Checkout/>}/>            
             <Route path="*" element={<NotFound404/>}/>
           </Routes>
+          <Footer/>
         </BrowserRouter>          
       </CartContextProvider>
     </AppContextProvider>
